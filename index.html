@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Social links profile</title>
+
+    <style>
+      @font-face{
+        font-family: "Inter";
+        src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+        font-weight: normal;
+      }
+      
+      @font-face{
+        font-family: "Inter";
+        src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+      }
+      
+      @font-face{
+        font-family: "Inter";
+        src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+        font-weight: bold;
+      }
+      
+      :root {
+        --White: hsl(0, 0%, 100%);
+        --Grey-700: hsl(0, 0%, 20%);
+        --Grey-800: hsl(0, 0%, 12%);
+        --Grey-900: hsl(0, 0%, 8%);
+        --Green: hsl(75, 94%, 57%);
+      }
+      
+      body {
+        background-color: var(--Grey-900);
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      #card-layout, #informations-layout, #buttons-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #card-layout {
+        background-color: var(--Grey-800);
+        width: 304px;
+        padding: 40px;
+        border-radius: 8px;
+        gap: 24px;
+      }
+      
+      @media only screen and (max-width: 375px) {
+        #card-layout {
+          width: 279px;
+          padding: 24px;
+        }
+      }
+      
+      #name, #city, #biography, .button {
+        color: var(--White);
+        font-family: "Inter";
+        font-size: 14px;
+      }
+    
+      #avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+      }
+      
+      #name, #city, #biography {
+        text-align: center;
+        margin: 0;
+      }
+      
+      #informations-layout {
+        gap: 8px;
+      }
+      
+      #name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      #city {
+        color: var(--Green);
+        font-weight: 600;
+      }
+      
+      #buttons-layout, .button {
+        width: 100%;
+      }
+      
+      #buttons-layout {
+        gap: 16px;
+      }
+      
+      .button {
+        background-color: var(--Grey-700);
+        padding: 16px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      .button:hover {
+        background-color: var(--Green);
+        color: var(--Grey-800);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="card-layout">
+      <img id="avatar" src="assets/images/avatar-jessica.jpeg" alt="Avatar" />
+
+      <div id="informations-layout">
+        <h1 id="name">Jessica Randall</h1>
+        <p id="city">London, United Kingdom</p>
+      </div>
+    
+      <p id="biography">"Front-end developer and avid reader."</p>
+    
+      <div id="buttons-layout">
+        <button class="button" type="button"><span class="button-text">GitHub</span></button>
+        <button class="button" type="button"><span class="button-text">Frontend Mentor</span></button>
+        <button class="button" type="button"><span class="button-text">LinkedIn</span></button>
+        <button class="button" type="button"><span class="button-text">Twitter</span></button>
+        <button class="button" type="button"><span class="button-text">Instagram</span></button>
+      </div>
+    </div>
+  </body>
+  
+</html>
