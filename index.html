@@ -10,19 +10,19 @@
     <title>Frontend Mentor | Social links profile</title>
 
     <style>
-      @font-face{
+      @font-face {
         font-family: "Inter";
         src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
         font-weight: normal;
       }
       
-      @font-face{
+      @font-face {
         font-family: "Inter";
         src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
         font-weight: 600;
       }
       
-      @font-face{
+      @font-face {
         font-family: "Inter";
         src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
         font-weight: bold;
@@ -39,8 +39,9 @@
       body {
         background-color: var(--Grey-900);
         margin: 0;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
@@ -53,16 +54,19 @@
     
       #card-layout {
         background-color: var(--Grey-800);
-        width: 304px;
-        padding: 40px;
         border-radius: 8px;
         gap: 24px;
       }
       
-      @media only screen and (max-width: 375px) {
+      #card-layout {
+        width: 279px;
+        padding: 24px;
+      }
+      
+      @media only screen and (min-width: 384px) {
         #card-layout {
-          width: 279px;
-          padding: 24px;
+          width: 304px;
+          padding: 40px;
         }
       }
       
